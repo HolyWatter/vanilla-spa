@@ -1,4 +1,4 @@
-import Component from "../components/Component";
+import Component from "@components/Component";
 
 class ListPage extends Component {
   template() {

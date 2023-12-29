@@ -8,7 +8,6 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
-
   devServer: {
     port: 4000,
     hot: false,
@@ -21,4 +20,10 @@ module.exports = {
       template: "./src/index.html",
     }),
   ],
+  resolve: {
+    alias: {
+      "@pages": path.resolve(__dirname, "./src/pages"),
+      "@components": path.resolve(__dirname, "./src/components"),
+    },
+  },
 };

@@ -1,5 +1,5 @@
-import HomePage from "./pages/home";
-import ListPage from "./pages/list";
+import HomePage from "@pages/home";
+import ListPage from "@pages/list";
 
 const $root = document.getElementById("root");
 
@@ -16,7 +16,7 @@ const changeUrl = (requestedUrl) => {
 
 export const navigateTo = (path) => {
   if (window.location.pathname !== path) {
-    window.history.pushState({}, window.location.origin + path);
+    window.history.pushState({}, "", window.location.origin + path);
     changeUrl(path);
   }
 };
