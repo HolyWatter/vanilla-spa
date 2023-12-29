@@ -1,15 +1,14 @@
 import HomePage from "./pages/home";
-
-// export const initialzeRouter = () => {};
+import ListPage from "./pages/list";
 
 const $root = document.getElementById("root");
 
 const routes = {
   "/": HomePage,
+  "/list": ListPage,
 };
 
 const changeUrl = (requestedUrl) => {
-  console.log(requestedUrl);
   const matchedComponent = routes[requestedUrl];
 
   matchedComponent ? new matchedComponent($root).render() : null;
