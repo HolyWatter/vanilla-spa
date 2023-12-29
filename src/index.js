@@ -1,7 +1,3 @@
-import HomePage from "./pages/home";
+import { initialzeRouter } from "./router";
 
-const $root = document.getElementById("root");
-
-const home = new HomePage($root).render();
-
-home.render();
+initialzeRouter();
