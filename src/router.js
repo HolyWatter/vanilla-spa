@@ -1,5 +1,6 @@
 import HomePage from "@pages/home";
 import ListPage from "@pages/list";
+import Layout from "./components/shared/Layout";
 
 const $root = document.getElementById("root");
 
@@ -11,7 +12,7 @@ const routes = {
 const changeUrl = (requestedUrl) => {
   const matchedComponent = routes[requestedUrl];
 
-  matchedComponent ? new matchedComponent($root).render() : null;
+  matchedComponent ? new Layout($root, matchedComponent).render() : null;
 };
 
 export const navigateTo = (path) => {
